@@ -7,12 +7,11 @@ const ᴠʟᴋʏʀᴇ_Buttons = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛ
 const ᴠʟᴋʏʀᴇ_Static = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ᴠʟᴋʏʀᴇ_Static`);
 const { MessageType, Mimetype } = require(`@adiwajshing/baileys`);
 const cleanRF = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/cleanRF`);
-const ꜰᴜᴄᴋ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/oShit`);
 const _𝔏𝔞𝔟_ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/_𝔏𝔞𝔟_`);
-const ud = require(`urban-dictionary`);
+const ꜰᴜᴄᴋ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/oShit`);
+const got = require(`got`);
 var ᴋᴇɪᴇx = new RegExp(_𝔏𝔞𝔟_.FOXTROT, `g`);
 var ᴋᴇɪ = /\/\^\[(.*)+\]\/\g/g.exec(ᴋᴇɪᴇx)[1];
-const vers = require(`../../package.json`);
 const fs = require(`fs`);
 var path = require(`path`);
 var scriptName = path.basename(__filename);
@@ -22,7 +21,7 @@ var newScpt = scriptName.slice(0, -3).toLowerCase();
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 module.exports = {
   name: newScpt,
-  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}ud*  _topic_`,
+  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}github* _user_  or replying *${ᴋᴇɪ}github*`,
   async handle(ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, KryChat, ᴠʟᴋʏʀᴇ, 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙, ꜱɪᴛʀᴀᴘ, Ping) {
     try {
       const ʟɴᴀᴍᴇ = ᴠʟᴋʏʀᴇ.sender;
@@ -142,61 +141,102 @@ _🦋Try ${ᴋᴇɪ}${ᴅꜰɴᴀᴍᴇ} Again!_`,
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-          var text = ``;
-          if (!(ᴠʟᴋʏʀᴇ.replyMessage === ``)) {
-            text = ᴠʟᴋʏʀᴇ.replyMessage;
-          } else if (𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.length === 0) {
-            var 𝓜Usage = ꜱɪᴛʀᴀᴘ.get(ᴠʟᴋʏʀᴇ.commandName);
-            var ᴍɪᴢᴜᴋɪᴍᴏʀᴇ =
-              𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ === undefined ? `Null` : 𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ;
-            const ᴀʀɢᴜᴍᴇɴᴛ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ`);
-            userBadge.Limits = userBadge.Limits + 1;
-            await userBadge
-              .save()
-              .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
-            return ᴀʀɢᴜᴍᴇɴᴛ.ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ(
-              ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-              KryChat,
-              ᴠʟᴋʏʀᴇ,
-              ʟɴᴀᴍᴇ,
-              ᴘɴᴀᴍᴇ,
-              ᴠʟᴋʏʀᴇ.commandName,
-              ᴍɪᴢᴜᴋɪᴍᴏʀᴇ
-            );
+          let user_name = ``;
+          if (ᴠʟᴋʏʀᴇ.isReply) {
+            user_name = ᴠʟᴋʏʀᴇ.replyMessage;
           } else {
-            text = 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.join(` `);
+            if (𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.length === 0) {
+              userBadge.Limits = userBadge.Limits + 1;
+              await userBadge
+                .save()
+                .catch((error) =>
+                  ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat)
+                );
+              var 𝓜Usage = ꜱɪᴛʀᴀᴘ.get(ᴠʟᴋʏʀᴇ.commandName);
+              var ᴍɪᴢᴜᴋɪᴍᴏʀᴇ =
+                𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ === undefined ? `Null` : 𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ;
+              const ᴀʀɢᴜᴍᴇɴᴛ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ`);
+              return ᴀʀɢᴜᴍᴇɴᴛ.ɴᴇᴇᴅᴀʀɢᴜᴍᴇɴᴛ(
+                ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+                KryChat,
+                ᴠʟᴋʏʀᴇ,
+                ʟɴᴀᴍᴇ,
+                ᴘɴᴀᴍᴇ,
+                ᴠʟᴋʏʀᴇ.commandName,
+                ᴍɪᴢᴜᴋɪᴍᴏʀᴇ
+              );
+            }
+            user_name = 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙[0];
           }
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-          let Response = await ud.define(text);
-          let result = Response.reduce(function (prev, current) {
-            return prev.thumbs_up + prev.thumbs_down >
-              current.thumbs_up + current.thumbs_down
-              ? prev
-              : current;
+          let userResponse = await got(
+            `https://api.github.com/users/` + user_name
+          );
+          let user = JSON.parse(userResponse.body);
+          Object.keys(user).forEach(function (key) {
+            if (user[key] === null || user[key] === ``) {
+              user[key] = `N/A`;
+            }
           });
-          result.definition = result.definition.replace(/\[/g, `_`);
-          result.definition = result.definition.replace(/\]/g, `_`);
-          result.example = result.example.replace(/\[/g, `_`);
-          result.example = result.example.replace(/\]/g, `_`);
+          let caption =
+            `*👤 Name :* ` +
+            user.name +
+            `\n*💻 Link :* ` +
+            user.html_url +
+            `\n*🔧 Type :* ` +
+            user.type +
+            `\n*🏢 Company :* ` +
+            user.company +
+            `\n*🔭 Blog :* ` +
+            user.blog +
+            `\n*📍 Location :* ` +
+            user.location +
+            `\n*📝 Bio :* ` +
+            user.bio +
+            `\n*❤️ Followers :* ` +
+            user.followers +
+            `\n*👁️ Following :* ` +
+            user.following +
+            `\n*📊 Public Repos :* ` +
+            user.public_repos +
+            `\n*📄 Public Gists :* ` +
+            user.public_gists +
+            `\n*🔗 Profile Created :* ` +
+            user.created_at +
+            `\n*✏️ Profile Updated :* ` +
+            user.updated_at;
+          if (user.public_repos > 0) {
+            let reposResponse = await got(user.repos_url);
+            let reposData = JSON.parse(reposResponse.body);
+            repos = reposData[0].name;
+            for (let i = 1; i < reposData.length && i < 5; i++) {
+              repos += ` | ` + reposData[i].name;
+            }
+            caption += `\n*🔍 Some Repos :* ` + repos;
+          }
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-
-          return ᴠʟᴋʏʀᴇ_Buttons.MTB(
-            ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-            KryChat,
-            ᴠʟᴋʏʀᴇ,
-            `🪶 𝐇𝐞𝐲:, *꧁『@${ᴘɴᴀᴍᴇ}』꧂*
- 
-
-🧬𝐂𝐨𝐦𝐦𝐚𝐧𝐝: _${ᴋᴇɪ}${ꜰɪɴᴀᴍᴇ}_
-🔎Word: ${result.word}
-📚Defination: ${result.definition}
-🫒Example: ${result.example}
-👍: ${result.thumbs_up} |👎: ${result.thumbs_down}`
-          );
+          await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
+            .sendMessage(
+              ᴠʟᴋʏʀᴇ.chatId,
+              {
+                url: user.avatar_url,
+              },
+              MessageType.image,
+              {
+                quoted: KryChat,
+                mimetype: Mimetype.png,
+                caption: caption,
+                thumbnail: null,
+              }
+            )
+            .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
+          `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
+          /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
+          `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
         }
       );
       `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;

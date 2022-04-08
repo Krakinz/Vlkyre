@@ -9,10 +9,11 @@ const { MessageType, Mimetype } = require(`@adiwajshing/baileys`);
 const cleanRF = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/cleanRF`);
 const ꜰᴜᴄᴋ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/oShit`);
 const _𝔏𝔞𝔟_ = require(`../../ᴠʟᴋʏʀᴇ🕸️ʜᴏꜱᴛᴇʀ/_𝔏𝔞𝔟_`);
-const ud = require(`urban-dictionary`);
 var ᴋᴇɪᴇx = new RegExp(_𝔏𝔞𝔟_.FOXTROT, `g`);
 var ᴋᴇɪ = /\/\^\[(.*)+\]\/\g/g.exec(ᴋᴇɪᴇx)[1];
 const vers = require(`../../package.json`);
+let cheerio = require(`cheerio`);
+let axios = require(`axios`);
 const fs = require(`fs`);
 var path = require(`path`);
 var scriptName = path.basename(__filename);
@@ -22,7 +23,7 @@ var newScpt = scriptName.slice(0, -3).toLowerCase();
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 module.exports = {
   name: newScpt,
-  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}ud*  _topic_`,
+  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}wiki* _text_`,
   async handle(ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, KryChat, ᴠʟᴋʏʀᴇ, 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙, ꜱɪᴛʀᴀᴘ, Ping) {
     try {
       const ʟɴᴀᴍᴇ = ᴠʟᴋʏʀᴇ.sender;
@@ -142,10 +143,7 @@ _🦋Try ${ᴋᴇɪ}${ᴅꜰɴᴀᴍᴇ} Again!_`,
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-          var text = ``;
-          if (!(ᴠʟᴋʏʀᴇ.replyMessage === ``)) {
-            text = ᴠʟᴋʏʀᴇ.replyMessage;
-          } else if (𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.length === 0) {
+          if (𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.length === 0) {
             var 𝓜Usage = ꜱɪᴛʀᴀᴘ.get(ᴠʟᴋʏʀᴇ.commandName);
             var ᴍɪᴢᴜᴋɪᴍᴏʀᴇ =
               𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ === undefined ? `Null` : 𝓜Usage.ᴠʟᴋʏʀᴇӄǟɨʐօ;
@@ -163,40 +161,98 @@ _🦋Try ${ᴋᴇɪ}${ᴅꜰɴᴀᴍᴇ} Again!_`,
               ᴠʟᴋʏʀᴇ.commandName,
               ᴍɪᴢᴜᴋɪᴍᴏʀᴇ
             );
-          } else {
-            text = 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.join(` `);
           }
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
-          let Response = await ud.define(text);
-          let result = Response.reduce(function (prev, current) {
-            return prev.thumbs_up + prev.thumbs_down >
-              current.thumbs_up + current.thumbs_down
-              ? prev
-              : current;
-          });
-          result.definition = result.definition.replace(/\[/g, `_`);
-          result.definition = result.definition.replace(/\]/g, `_`);
-          result.example = result.example.replace(/\[/g, `_`);
-          result.example = result.example.replace(/\]/g, `_`);
+          async function wikipedia(querry) {
+            try {
+              const link = await axios.get(
+                `https://en.wikipedia.org/wiki/${querry}`
+              );
+              const $ = cheerio.load(link.data);
+              let title = $(`#firstHeading`).text().trim();
+              let thumb =
+                $(`#mw-content-text`)
+                  .find(
+                    `div.mw-parser-output > div:nth-child(1) > table > tbody > tr:nth-child(2) > td > a > img`
+                  )
+                  .attr(`src`) ||
+                `//i.ibb.co/nzqPBpC/http-error-404-not-found.png`;
+              let contents = [];
+              $(`#mw-content-text > div.mw-parser-output`).each(function (
+                rayy,
+                Ra
+              ) {
+                let explanation = $(Ra).find(`p`).text().trim();
+                contents.push(explanation);
+              });
+              for (let i of contents) {
+                const data = {
+                  status: link.status,
+                  result: {
+                    title: title,
+                    thumb: `https:` + thumb,
+                    contents: i,
+                  },
+                };
+                return data;
+              }
+            } catch (error) {
+              var notFond = {
+                status: link.status,
+                Pesan: error,
+              };
+              return notFond;
+            }
+          }
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
           /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
           `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
+          wikipedia(𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.join(` `))
+            .then((res) => {
+              if (res.result.thumb.endsWith(`not-found.png`)) {
+                var thumbs = `./ᴠʟᴋʏʀᴇ🔌cord/ᴠʟᴋʏʀᴇ_Wikipedia.png`;
+              } else {
+                var thumbs = res.result.thumb;
+              }
+              try {
+                return ᴠʟᴋʏʀᴇ_Buttons.MIB(
+                  ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+                  KryChat,
+                  ᴠʟᴋʏʀᴇ,
+                  `*꧁『@${ᴘɴᴀᴍᴇ}』꧂*
 
-          return ᴠʟᴋʏʀᴇ_Buttons.MTB(
-            ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-            KryChat,
-            ᴠʟᴋʏʀᴇ,
-            `🪶 𝐇𝐞𝐲:, *꧁『@${ᴘɴᴀᴍᴇ}』꧂*
- 
 
 🧬𝐂𝐨𝐦𝐦𝐚𝐧𝐝: _${ᴋᴇɪ}${ꜰɪɴᴀᴍᴇ}_
-🔎Word: ${result.word}
-📚Defination: ${result.definition}
-🫒Example: ${result.example}
-👍: ${result.thumbs_up} |👎: ${result.thumbs_down}`
-          );
+🥪 𝐓𝐢𝐭𝐥𝐞: ${res.result.title}
+└─🔎 𝐖𝐢𝐤𝐢➤ ${res.result.contents.trim()}`,
+                  thumbs
+                );
+              } catch (error) {
+                ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
+              }
+            })
+            .catch(async () => {
+              userBadge.Limits = userBadge.Limits + 1;
+              await userBadge
+                .save()
+                .catch((error) =>
+                  ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat)
+                );
+              return ᴠʟᴋʏʀᴇ_Buttons.MTB(
+                ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+                KryChat,
+                ᴠʟᴋʏʀᴇ,
+                `*꧁『@${ᴘɴᴀᴍᴇ}』꧂*
+
+🧬𝐂𝐨𝐦𝐦𝐚𝐧𝐝: _${ᴋᴇɪ}${ꜰɪɴᴀᴍᴇ}_
+🤧𝐎𝐩𝐩𝐬𝐢𝐞: _Nothing found for, ${𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙.join(` `)}_*`
+              );
+            });
+          `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
+          /*              (𝐜)𝐕𝐥𝐤𝐲𝐫𝐞 𝐢𝐬 𝐚 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐌𝐮𝐥𝐭𝐢𝐏𝐮𝐫𝐩𝐨𝐬𝐞-𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐰𝐢𝐭𝐡 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧,𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝟏𝟎𝟎+ 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬!*/
+          `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
         }
       );
       `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
