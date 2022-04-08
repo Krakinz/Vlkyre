@@ -172,7 +172,7 @@ _🦋Try ${ᴋᴇɪ}${ᴅꜰɴᴀᴍᴇ} Again!_`,
             var Convert_From = `${FILEID}.mp4`;
             var Convert_To = `_${FILEID}_.mp4`;
             exec(
-              `ffmpeg -i ${Convert_From} -af "apulsator=hz=0.08" ${Convert_To}`,
+              `ffmpeg -i ${Convert_From} -af "flanger" ${Convert_To}`,
               async (error) => {
                 cleanRF.cleanRF(Convert_From);
                 if (error) {
