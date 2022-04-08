@@ -21,8 +21,8 @@ var newScpt = scriptName.slice(0, -3).toLowerCase();
 `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
 module.exports = {
   name: newScpt,
-  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}${newScpt}* _reply to person to ban_
-*${ᴋᴇɪ}${newScpt}* _don't reply to anyone and group will be banned_`,
+  ᴠʟᴋʏʀᴇӄǟɨʐօ: `*${ᴋᴇɪ}${newScpt}* _reply to person to un-ban_
+*${ᴋᴇɪ}${newScpt}* _don't reply to anyone and group will be un-banned_`,
   async handle(ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, KryChat, ᴠʟᴋʏʀᴇ, 𝖆𝖗𝖌𝖚𝖒𝖊𝖓𝖙, ꜱɪᴛʀᴀᴘ, Ping) {
     try {
       const ʟɴᴀᴍᴇ = ᴠʟᴋʏʀᴇ.sender;
@@ -53,12 +53,10 @@ module.exports = {
             ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
             KryChat,
             ᴠʟᴋʏʀᴇ,
-            `🪶 𝐇𝐞𝐲: 
+            `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
 
-╔════◇🛡️𝐒𝐮𝐝𝐨 𝐁𝐚𝐧
-║🍕 𝐅𝐫𝐨𝐦: *@${ᴘɴᴀᴍᴇ}*
-║❌ 𝗘𝗿𝗿𝗼𝗿: _Can't Ban My-Self_
-╚════════════╝`,
+🛡️𝐒𝐮𝐝𝐨 𝐔𝐧𝐁𝐚𝐧:
+🔓 𝐒𝐭𝐚𝐭𝐮𝐬: _Can't Use On My-Self_`,
             _𝔏𝔞𝔟_.RCLR
           );
         }
@@ -73,9 +71,8 @@ module.exports = {
           ᴠʟᴋʏʀᴇ,
           `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
 
-╔════◇🔒𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 
-║💡 _This Command is Only For Groups!_
-╚════════════╝`,
+🔒𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 
+💡 _This Command is Only For Groups!_`,
           _𝔏𝔞𝔟_.RCLR
         );
         `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
@@ -88,45 +85,32 @@ module.exports = {
             ID: ᴠʟᴋʏʀᴇ.chatId,
           },
           async (error, userBan) => {
-            if (error) {
-              ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
-              return;
-            }
+            if (error) return ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
             if (!userBan) {
-              var newUser = new Ban({
-                ID: ᴠʟᴋʏʀᴇ.chatId,
-              });
-              await newUser
-                .save()
-                .catch((error) =>
-                  ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat)
-                );
               return ᴠʟᴋʏʀᴇ_Buttons.MIB(
                 ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
                 KryChat,
                 ᴠʟᴋʏʀᴇ,
-                `🪶 𝐇𝐞𝐲: 
+                `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
 
-╔════◇🛡️𝐒𝐮𝐝𝐨 𝐁𝐚𝐧
-║🍕 𝐅𝐫𝐨𝐦: *@${ᴘɴᴀᴍᴇ}*
-║🔒 𝐒𝐭𝐚𝐭𝐮𝐬: *${groupData.subject}* Has Been Banned!
-╚════════════╝`,
-                _𝔏𝔞𝔟_.RCLR
-              );
-            } else {
-              return ᴠʟᴋʏʀᴇ_Buttons.MIB(
-                ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-                KryChat,
-                ᴠʟᴋʏʀᴇ,
-                `🪶 𝐇𝐞𝐲: 
-
-╔════◇🛡️𝐒𝐮𝐝𝐨 𝐁𝐚𝐧
-║🍕 𝐅𝐫𝐨𝐦: *@${ᴘɴᴀᴍᴇ}*
-║❌ 𝗘𝗿𝗿𝗼𝗿: *${groupData.subject}* = Already banned!
-╚════════════╝`,
+🛡️𝐒𝐮𝐝𝐨 𝐔𝐧𝐁𝐚𝐧:
+🔓 𝐒𝐭𝐚𝐭𝐮𝐬: *${groupData.subject}*, Was Not Banned!`,
                 _𝔏𝔞𝔟_.RCLR
               );
             }
+            await userBan
+              .delete()
+              .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
+            return ᴠʟᴋʏʀᴇ_Buttons.MIB(
+              ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+              KryChat,
+              ᴠʟᴋʏʀᴇ,
+              `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
+
+🛡️𝐒𝐮𝐝𝐨 𝐔𝐧𝐁𝐚𝐧:
+🔓 𝐒𝐭𝐚𝐭𝐮𝐬: *${groupData.subject}*, Has Been Un-Banned!`,
+              _𝔏𝔞𝔟_.RCLR
+            );
           }
         );
         `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
@@ -141,43 +125,32 @@ module.exports = {
             ID: Receiver,
           },
           async (error, userBan) => {
-            if (error) {
-              ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
-              return;
-            }
+            if (error) return ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat);
             if (!userBan) {
-              var newUser = new Ban({
-                ID: Receiver,
-              });
-              await newUser
-                .save()
-                .catch((error) =>
-                  ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat)
-                );
-              return ᴠʟᴋʏʀᴇ_Buttons.MIB(
+              return ᴠʟᴋʏʀᴇ_Buttons.MTB(
                 ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
                 KryChat,
                 ᴠʟᴋʏʀᴇ,
                 `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
 
-╔════◇🛡️𝐒𝐮𝐝𝐨 𝐁𝐚𝐧
-║🔒 𝐒𝐭𝐚𝐭𝐮𝐬: *@${քɛʀֆօռɢօȶռʊʍ}* Has Been Banned!
-╚════════════╝`,
-                _𝔏𝔞𝔟_.RCLR
-              );
-            } else {
-              return ᴠʟᴋʏʀᴇ_Buttons.MIB(
-                ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
-                KryChat,
-                ᴠʟᴋʏʀᴇ,
-                `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
-
-╔════◇🛡️𝐒𝐮𝐝𝐨 𝐁𝐚𝐧
-║❌ 𝗘𝗿𝗿𝗼𝗿: *@${քɛʀֆօռɢօȶռʊʍ}* Already banned!
-╚════════════╝`,
+🛡️𝐒𝐮𝐝𝐨 𝐔𝐧𝐁𝐚𝐧:
+🔓 𝐒𝐭𝐚𝐭𝐮𝐬: *@${քɛʀֆօռɢօȶռʊʍ}* Was Not Banned!`,
                 _𝔏𝔞𝔟_.RCLR
               );
             }
+            await userBan
+              .delete()
+              .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
+            return ᴠʟᴋʏʀᴇ_Buttons.MIB(
+              ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇,
+              KryChat,
+              ᴠʟᴋʏʀᴇ,
+              `*꧁『@${ᴘɴᴀᴍᴇ}』꧂* 
+
+🛡️𝐒𝐮𝐝𝐨 𝐔𝐧𝐁𝐚𝐧:
+🔓 𝐒𝐭𝐚𝐭𝐮𝐬: *@${քɛʀֆօռɢօȶռʊʍ}* Has Been Un-Banned!`,
+              _𝔏𝔞𝔟_.RCLR
+            );
           }
         );
         `|⬡════════════════════════════════════════════|❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ☊ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞|═══════════════════════════════════════════⬡|`;
