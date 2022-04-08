@@ -254,7 +254,7 @@ _🦋Try ${ᴋᴇɪ}${ᴅꜰɴᴀᴍᴇ} Again!_`,
                 .saveToFile(FFmpegFile)
                 .on("end", () => {
                   require("child_process").exec(
-                    `ffmpeg -i ${FFmpegFile} -af "atempo=0.8" ${FilteredAudio}`,
+                    `ffmpeg -i ${FFmpegFile} -af "aecho=0.8:0.9:1000:0.3" ${FilteredAudio}`,
                     async (error) => {
                       if (error) {
                         userBadge.Limits = userBadge.Limits + 1;
