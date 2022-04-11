@@ -9,7 +9,7 @@
 ### **Deployment**
 - First star and fork this repo or else auto update won't occur.
 - You need a [![Generic badge](https://img.shields.io/badge/🚀_HEROKU-purple.svg)](https://heroku.com) account to deploy bots, if you don't have you need to create one.
-- Get your [![Generic badge](https://img.shields.io/badge/Vlkyre_Session-blue.svg)](replit.com/@krakinz/Vlkyre) code here.
+- Get your [![Generic badge](https://img.shields.io/badge/Vlkyre_Session-blue.svg)](https://replit.com/@krakinz/Vlkyre) code here.
 - Scan the QR code generated on replit and head over to heroku and deploy Vlkyre.
 - Your deployment key should be something like this:
 
