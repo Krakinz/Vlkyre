@@ -9,7 +9,7 @@
 🦋𝐕𝐥𝐤𝐲𝐫𝐞: _Is an Advance Whatsapp User-Bot!_
 ### **Deployment**
 - First star and fork this repo or else auto update won't occur.
-- You need a Heroku account to deploy bots, if you don't have you need to create one.
+- You need a [![Generic badge](https://img.shields.io/badge/🚀HEROKU-purple.svg)](https://heroku.com) account to deploy bots, if you don't have you need to create one.
 - Get your Vlkyre session code buy running this script on replit.
 [![Generic badge](https://img.shields.io/badge/Repl.co-pink.svg)](replit.com/@krakinz/Vlkyre)
 - Scan the QR code generated on replit and head over to heroku and deploy Vlkyre.
