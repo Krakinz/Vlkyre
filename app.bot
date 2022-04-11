@@ -41,7 +41,7 @@
   ],
   "env": {
     "VLKYRE": {
-      "description": "Your Session Code. Get It From: https://KrakinzLab-Vlkyre.krakinzkon.repl.co",
+      "description": "Your Session Code. Get It From: https://replit.com/@krakinz/Vlkyre",
       "required": true
     },
     "CODE": {
