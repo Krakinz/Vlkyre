@@ -1,7 +1,6 @@
 <img align="centre" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg" alt="KryKnz"/><img align="centre" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/>
 
-### 🛰️[❝ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ❞](https://VlkyreAI.krakinzkon.repl.co/) 
-[![Generic badge](https://img.shields.io/badge/🚀HEROKU-purple.svg)](https://VlkyreAI.krakinzkon.repl.co/)
+### 🛰️[❝   Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞   ❞](https://VlkyreAI.krakinzkon.repl.co/) 
 [![Generic badge](https://img.shields.io/badge/🌐WEBSITE-white.svg)](https://VlkyreAI.krakinzkon.repl.co/)
 [![Generic badge](https://img.shields.io/badge/⛱️GROUPS-darkgreen.svg)](https://VlkyreAI.krakinzkon.repl.co/)
 
@@ -9,10 +8,13 @@
 🦋𝐕𝐥𝐤𝐲𝐫𝐞: _Is an Advance Whatsapp User-Bot!_
 ### **Deployment**
 - First star and fork this repo or else auto update won't occur.
-- You need a [![Generic badge](https://img.shields.io/badge/🚀HEROKU-purple.svg)](https://heroku.com) account to deploy bots, if you don't have you need to create one.
-- Get your Vlkyre session code buy running this script on replit.
-[![Generic badge](https://img.shields.io/badge/Repl.co-pink.svg)](replit.com/@krakinz/Vlkyre)
+- You need a [![Generic badge](https://img.shields.io/badge/🚀_HEROKU-purple.svg)](https://heroku.com) account to deploy bots, if you don't have you need to create one.
+- Get your [![Generic badge](https://img.shields.io/badge/Vlkyre_Session-blue.svg)](replit.com/@krakinz/Vlkyre) code here.
 - Scan the QR code generated on replit and head over to heroku and deploy Vlkyre.
+- Your deployment key should be something like this:
+
+https://heroku.com/deploy?template=https://github.com/your_username/repository_name
+
 
 <img img src="https://i.postimg.cc/KzKjcD50/vlkUvar.gif" />
 
