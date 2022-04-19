@@ -29,6 +29,6 @@ jobs:
       - name: Create Issue From File
         uses: peter-evans/create-issue-from-file@v3
         with:
-          title: Link Checker Report
+          title: Vlkyre Code Checker Report
           content-filepath: ./KrakinzLab/out.md
           labels: report, automated issue
