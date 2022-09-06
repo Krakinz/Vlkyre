@@ -24,13 +24,13 @@ RUN npm install -g npm
 RUN hash -r 
 RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 RUN curl https://cli-assets.heroku.com/install.sh | sh && heroku plugins:install heroku-builds
-RUN git clone https://github.com/KryKnz/Vlkyre.git 
+RUN git clone https://github.com/Krakinz/Vlkyre.git 
 RUN cd Vlkyre
 WORKDIR /Vlkyre
 RUN pip install -r ᴠʟᴋʏʀᴇ🀄ᴇxʜᴀᴜꜱᴛ/кгץкภչ.txt
 RUN npm install --force --save && rm package-lock.json && npm install -g spotify-dl spdl-core
 RUN export TERM=xterm
-RUN git config --global user.name 'KryKnz' && git config --global user.email 'KryKnz@yandex.com' && git config pull.rebase false 
+RUN git config --global user.name 'Krakinz' && git config --global user.email 'pc.400k@gmail.com' && git config pull.rebase false 
 # RUN git init --initial-branch=🛰️KryTek && git fetch origin 🛰️KryTek && git reset --hard origin/🛰️KryTek && git stash && git stash drop && git pull
 CMD python ⭕𝖈𝖆𝖗𝖆𝖒𝖊𝖑.py
 # |⬡════════════════════════════════════════════|⌜ Ⓒ𝐕𝐥𝐤𝐲𝐫𝐞 ⌬ ❝ ᴘᴏᴡᴇʀᴇᴅ ☊ ᴋʀᴀᴋɪɴᴢʟᴀʙ™ ❞ ⌟|═══════════════════════════════════════════⬡|
