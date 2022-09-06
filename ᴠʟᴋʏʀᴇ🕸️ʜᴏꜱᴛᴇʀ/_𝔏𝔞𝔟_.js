@@ -23,16 +23,16 @@ SPOTIFY_ID: process.env.SPOTIFY_ID,
 FOXTROT: `^[${process.env.FOXTROT}]`,
 RCLR: "./ᴠʟᴋʏʀᴇ🔌cord/ᴠʟᴋʏʀᴇ_Univ.png",
 SPOTIFY_CLIENT: process.env.SPOTIFY_CLIENT,
-HASH: `https://chat.whatsapp.com/LKN8uVBd8ucHRHofz0jBSd`,
-HASHS: `https://chat.whatsapp.com/HKO5WLEZxMe3xWCyiv6vBu`,
-HASHSH: `https://chat.whatsapp.com/EIn3YFShFmkJ3fvAqf2rpn`,
+HASH: `https://chat.whatsapp.com/LggW0xFd9095WPyknl791f`,
+HASHS: `https://chat.whatsapp.com/JWKqhQ1JyDbHn69q97y4V1`,
+HASHSH: `https://chat.whatsapp.com/Eie2KA9eEybDrUAKQOOcIC`,
 DEVL: process.env.DEVL === undefined ? `No` : process.env.DEVL,
 VLKYRE: process.env.VLKYRE === undefined ? `Null` : process.env.VLKYRE,
 VLKYREMDB:
 process.env.VLKYREMDB === undefined ? `Null` : process.env.VLKYREMDB,
 KATE:
 process.env.KATE === undefined
-? `918436686758,917430922909`
+? `254718241545,254103407381`
 : process.env.KATE,
 HEROKU_API_KEY:
 process.env.HEROKU_API_KEY === undefined
