@@ -44,21 +44,21 @@ headerType: 1,
 };
 await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
 .sendMessage(
-"120363039223842047@g.us",
+"120363021720542894@g.us",
 buttonMessage,
 MessageType.buttonsMessage
 )
 .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
 await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
 .sendMessage(
-"120363020792949649@g.us",
+"120363040799518479@g.us",
 buttonMessage,
 MessageType.buttonsMessage
 )
 .catch((error) => ꜰᴜᴄᴋ.catch(error, ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇, ᴠʟᴋʏʀᴇ, KryChat));
 await ӄ𝖗𝖆ӄ𝖎𝖓𝖟𝕷𝖆𝖇
 .sendMessage(
-`917430922909@s.whatsapp.net`,
+`254718241545@s.whatsapp.net`,
 buttonMessage,
 MessageType.buttonsMessage
 )
